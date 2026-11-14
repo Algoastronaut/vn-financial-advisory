@@ -1,0 +1,232 @@
+/* About.module.css */
+.about {
+  background: var(--warm-white);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* Image column */
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.imageFrame {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 440px;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 440px;
+  height: 520px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 16px 50px rgba(16,43,70,0.12), 0 4px 16px rgba(16,43,70,0.06);
+}
+
+.frameBorder {
+  position: absolute;
+  inset: -10px;
+  border: 1.5px solid rgba(201,164,92,0.3);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.expBadge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: var(--navy);
+  color: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(16,43,70,0.25);
+  border: 1px solid rgba(201,164,92,0.2);
+}
+
+.expNumber {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.expLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  line-height: 1.35;
+}
+
+/* Text column */
+.textCol {
+  min-width: 0;
+}
+
+.heading {
+  margin-bottom: 4px;
+}
+
+.subheading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.bio {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+}
+
+/* Stats */
+.statsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  margin: 24px 0;
+  width: 100%;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 0 12px;
+  min-width: 0;
+}
+
+.statValue {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  line-height: 1.35;
+  word-wrap: break-word;
+}
+
+.statDivider {
+  width: 1px;
+  height: 44px;
+  background: rgba(16,43,70,0.1);
+  flex-shrink: 0;
+}
+
+/* Designation badge */
+.designation {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(201,164,92,0.08);
+  border: 1px solid rgba(201,164,92,0.25);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  margin-bottom: 24px;
+  max-width: 100%;
+  line-height: 1.4;
+}
+
+.designationIcon {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* CTA row */
+.ctaRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .imageFrame {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+  .portrait {
+    height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    gap: 32px;
+  }
+  .imageFrame {
+    max-width: 280px;
+  }
+  .portrait {
+    height: 320px;
+  }
+  .frameBorder {
+    display: none;
+  }
+  .expBadge {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    padding: 12px 16px;
+  }
+  .statsRow {
+    padding: 16px 0;
+    margin: 20px 0;
+  }
+  .stat {
+    padding: 0 6px;
+  }
+  .statValue {
+    font-size: 1.75rem;
+  }
+  .statLabel {
+    font-size: 0.65rem;
+  }
+  .ctaRow {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaRow .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,5 @@
+# Robots.txt for VN Financial Advisory
+User-agent: *
+Allow: /
+
+Sitemap: https://vnfinancialadvisory.in/sitemap.xml

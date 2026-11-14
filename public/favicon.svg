@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Shield background -->
+  <path d="M16 1L2 7v10c0 7 6 13 14 15 8-2 14-8 14-15V7L16 1z" fill="#102B46" stroke="#C9A45C" stroke-width="1.2"/>
+  <!-- VN text -->
+  <text x="16" y="19" dominant-baseline="middle" text-anchor="middle" fill="#C9A45C"
+    font-family="Georgia, serif" font-size="10" font-weight="bold" letter-spacing="1">VN</text>
+</svg>

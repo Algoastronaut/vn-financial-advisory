@@ -1,0 +1,55 @@
+/* VNLogo.module.css */
+.navbarWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.navbarShield {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.navbarText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.navbarBrand {
+  font-family: var(--font-serif);
+  font-size: clamp(0.95rem, 3.8vw, 1.15rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbarTagline {
+  font-size: clamp(0.52rem, 1.8vw, 0.62rem);
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+@media (max-width: 380px) {
+  .navbarShield {
+    width: 32px;
+    height: 32px;
+  }
+  .navbarWrap {
+    gap: 8px;
+  }
+  .navbarTagline {
+    display: none;
+  }
+}

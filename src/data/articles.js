@@ -1,0 +1,203 @@
+// Full bilingual educational articles — pure awareness, no fabricated statistics or returns
+export const ARTICLES = {
+  'what-is-mutual-fund': {
+    en: {
+      title: 'What Is a Mutual Fund?',
+      category: 'Mutual Funds',
+      readTime: '4 min read',
+      date: 'Updated November 2024',
+      content: [
+        {
+          heading: 'Introduction to Mutual Funds',
+          text: 'A mutual fund is a professionally managed investment vehicle that pools money from many individuals and institutional investors. The collected capital is invested in a diversified portfolio of securities such as equities, debt instruments, or money market securities, depending on the scheme’s stated objective.'
+        },
+        {
+          heading: 'How Does a Mutual Fund Operate?',
+          text: 'Each investor owns units of the fund, which represent a proportional share of the overall portfolio. A professional fund manager, guided by research analysts and strict regulatory frameworks set by SEBI (Securities and Exchange Board of India), manages the portfolio. When the value of underlying securities changes, the Net Asset Value (NAV) of the fund changes accordingly.'
+        },
+        {
+          heading: 'Core Categories of Mutual Funds',
+          text: '• Equity Schemes: Invest primarily in shares of listed companies. Suitable for long-term wealth creation awareness.\n• Debt Schemes: Invest in fixed income securities like government bonds, corporate debentures, and treasury bills, focusing on stability and regular income.\n• Hybrid Schemes: Combine equity and debt to balance growth potential with risk mitigation.\n• Solution-Oriented / Index Funds: Designed for specific goals like retirement planning or tracking broad market indices.'
+        },
+        {
+          heading: 'Key Considerations Before Investing',
+          text: 'It is essential to understand your financial goals, investment horizon, and risk tolerance before selecting any scheme. Always remember: Mutual Fund investments are subject to market risks. Please read all scheme-related documents carefully.'
+        }
+      ]
+    },
+    hi: {
+      title: 'म्यूचुअल फंड क्या है?',
+      category: 'म्यूचुअल फंड',
+      readTime: '4 मिनट पढ़ें',
+      date: 'नवंबर 2024 में अपडेट किया गया',
+      content: [
+        {
+          heading: 'म्यूचुअल फंड का परिचय',
+          text: 'म्यूचुअल फंड एक पेशेवर रूप से प्रबंधित निवेश माध्यम है जो कई व्यक्तिगत और संस्थागत निवेशकों से धन एकत्र करता है। इस पूंजी को योजना के उद्देश्य के अनुसार इक्विटी, डेट इंस्ट्रूमेंट्स या मनी मार्केट सिक्योरिटीज के विविध पोर्टफोलियो में निवेश किया जाता है।'
+        },
+        {
+          heading: 'म्यूचुअल फंड कैसे काम करता है?',
+          text: 'प्रत्येक निवेशक फंड की यूनिट्स का मालिक होता है, जो समग्र पोर्टफोलियो के आनुपातिक हिस्से का प्रतिनिधित्व करती हैं। एक पेशेवर फंड मैनेजर, सेबी (SEBI) द्वारा निर्धारित नियमों के तहत पोर्टफोलियो का प्रबंधन करता है। जब अंतर्निहित प्रतिभूतियों का मूल्य बदलता है, तो फंड का नेट एसेट वैल्यू (NAV) बदलता है।'
+        },
+        {
+          heading: 'म्यूचुअल फंड की मुख्य श्रेणियां',
+          text: '• इक्विटी स्कीम्स: मुख्य रूप से सूचीबद्ध कंपनियों के शेयरों में निवेश करती हैं। दीर्घकालिक धन निर्माण के लिए उपयोगी।\n• डेट स्कीम्स: सरकारी बॉन्ड और कॉर्पोरेट डिबेंचर जैसी निश्चित आय वाली प्रतिभूतियों में निवेश करती हैं।\n• हाइब्रिड स्कीम्स: विकास क्षमता और स्थिरता के संतुलन के लिए इक्विटी और डेट दोनों का मिश्रण।\n• इंडेक्स फंड: बाजार सूचकांकों को ट्रैक करने के लिए डिजाइन किए गए फंड।'
+        },
+        {
+          heading: 'निवेश से पहले महत्वपूर्ण बातें',
+          text: 'किसी भी योजना को चुनने से पहले अपने वित्तीय लक्ष्यों, निवेश अवधि और जोखिम उठाने की क्षमता को समझना आवश्यक है। हमेशा याद रखें: म्यूचुअल फंड निवेश बाजार जोखिमों के अधीन हैं। कृपया सभी योजना-संबंधित दस्तावेज़ ध्यान से पढ़ें।'
+        }
+      ]
+    }
+  },
+  'how-sip-works': {
+    en: {
+      title: 'How Does a Systematic Investment Plan (SIP) Work?',
+      category: 'SIP Investing',
+      readTime: '5 min read',
+      date: 'Updated November 2024',
+      content: [
+        {
+          heading: 'Understanding SIP',
+          text: 'A Systematic Investment Plan (SIP) is a method of investing a predetermined, fixed amount in a chosen mutual fund scheme at regular intervals — typically monthly or quarterly. Rather than timing the market, SIP encourages consistent, disciplined financial habits.'
+        },
+        {
+          heading: 'The Principle of Rupee Cost Averaging',
+          text: 'One of the most notable advantages of an SIP is Rupee Cost Averaging. When markets are down and NAV is lower, your fixed instalment purchases more units. When markets are higher, your instalment buys fewer units. Over time, this smooths out market volatility without requiring you to guess market peaks and troughs.'
+        },
+        {
+          heading: 'The Power of Compounding Over Time',
+          text: 'By investing steadily over long horizons, any earnings generated by the underlying investments can themselves generate earnings. Starting early gives your money more time to compound, making consistency a vital factor in wealth-building awareness.'
+        },
+        {
+          heading: 'Flexibility and Discipline',
+          text: 'SIPs offer convenience through automated bank mandates (NACH), allowing investors to start with modest amounts and increase allocations as income grows over time. Investors can modify, pause, or redeem subject to scheme terms.'
+        }
+      ]
+    },
+    hi: {
+      title: 'सिस्टमेटिक इन्वेस्टमेंट प्लान (SIP) कैसे काम करता है?',
+      category: 'SIP निवेश',
+      readTime: '5 मिनट पढ़ें',
+      date: 'नवंबर 2024 में अपडेट किया गया',
+      content: [
+        {
+          heading: 'SIP को समझना',
+          text: 'सिस्टमेटिक इन्वेस्टमेंट प्लान (SIP) नियमित अंतराल पर — आमतौर पर मासिक — चुनी हुई म्यूचुअल फंड योजना में एक पूर्व-निर्धारित निश्चित राशि निवेश करने की एक सुविधाजनक विधि है। बाजार के उतार-चढ़ाव की चिंता किए बिना यह नियमित बचत को बढ़ावा देता है।'
+        },
+        {
+          heading: 'रुपया लागत औसत (Rupee Cost Averaging) का सिद्धांत',
+          text: 'SIP का सबसे बड़ा लाभ रूपी कॉस्ट एवरेजिंग है। जब बाजार नीचे होता है और NAV कम होता है, तो आपकी किस्त अधिक यूनिट्स खरीदती है। जब बाजार ऊपर होता है, तो कम यूनिट्स खरीदी जाती हैं। समय के साथ यह बाजार की अस्थिरता को संतुलित करता है।'
+        },
+        {
+          heading: 'कंपाउंडिंग (चक्रवृद्धि) का महत्व',
+          text: 'दीर्घकालिक अवधि में नियमित निवेश करने से अर्जित रिटर्न पर भी रिटर्न मिलने लगता है। जल्दी शुरुआत करने से आपके पैसे को बढ़ने के लिए अधिक समय मिलता है।'
+        },
+        {
+          heading: 'लचीलापन और सुविधा',
+          text: 'SIP बैंक ऑटो-डेबिट के माध्यम से स्वचालित रूप से संचालित होती है। आप छोटी राशि से शुरुआत कर सकते हैं और आय बढ़ने पर अपनी निवेश राशि बढ़ा सकते हैं।'
+        }
+      ]
+    }
+  },
+  'life-insurance-basics': {
+    en: {
+      title: 'Understanding Life Insurance: Protection for What Matters Most',
+      category: 'Life Insurance',
+      readTime: '5 min read',
+      date: 'Updated November 2024',
+      content: [
+        {
+          heading: 'The Fundamental Purpose of Life Insurance',
+          text: 'Life insurance is fundamentally a risk-mitigation contract between an individual and an insurer. In exchange for regular premium payments, the insurer provides a guaranteed financial safety net (sum assured) to the designated family beneficiaries in the unfortunate event of the insured’s passing.'
+        },
+        {
+          heading: 'Core Types of Life Insurance Policies',
+          text: '• Term Life Insurance: Pure protection coverage offering a high sum assured for a specific period at affordable premiums. There is typically no maturity payout if the insured survives.\n• Endowment & Savings Plans: Combine protection with disciplined long-term savings, providing a maturity benefit alongside death cover.\n• Unit Linked Insurance Plans (ULIPs): Offer a combination of insurance cover and market-linked investment portfolios, subject to market risks.\n• Whole Life Insurance: Provides continuous coverage typically up to age 99 or 100.'
+        },
+        {
+          heading: 'Determining the Right Sum Assured',
+          text: 'A proper life cover should consider living expenses, household liabilities, outstanding home loans, children’s future educational milestones, and inflation. Evaluating your family’s real financial commitments ensures you do not remain underinsured.'
+        },
+        {
+          heading: 'Importance of Complete and Honest Disclosure',
+          text: 'Always disclose full health history, pre-existing conditions, smoking/tobacco status, and existing insurance covers during the application stage to ensure seamless claim settlement for your loved ones.'
+        }
+      ]
+    },
+    hi: {
+      title: 'जीवन बीमा को समझना: परिवार के लिए सुरक्षा कवच',
+      category: 'जीवन बीमा',
+      readTime: '5 मिनट पढ़ें',
+      date: 'नवंबर 2024 में अपडेट किया गया',
+      content: [
+        {
+          heading: 'जीवन बीमा का मूल उद्देश्य',
+          text: 'जीवन बीमा एक वित्तीय सुरक्षा समझौता है। नियमित प्रीमियम भुगतान के बदले, अप्रत्याशित घटना की स्थिति में बीमा कंपनी नामांकित परिवार के सदस्यों को एक निश्चित वित्तीय राशि (सम एश्योर्ड) प्रदान करती है ताकि उनका भविष्य सुरक्षित रहे।'
+        },
+        {
+          heading: 'जीवन बीमा के मुख्य प्रकार',
+          text: '• टर्म इंश्योरेंस: शुद्ध सुरक्षा योजना जो किफायती प्रीमियम पर बड़ा कवर प्रदान करती है।\n• एंडोमेंट और बचत योजनाएं: सुरक्षा के साथ-साथ परिपक्वता पर निश्चित बचत लाभ प्रदान करती हैं।\n• यूलिप (ULIP): बीमा कवर के साथ बाजार-आधारित निवेश का विकल्प प्रदान करती हैं।\n• संपूर्ण जीवन बीमा (Whole Life): 99 या 100 वर्ष की आयु तक निरंतर सुरक्षा प्रदान करती हैं।'
+        },
+        {
+          heading: 'सही बीमा राशि का चयन',
+          text: 'बीमा कवर का निर्धारण करते समय पारिवारिक खर्चों, बकाया ऋणों, बच्चों की शिक्षा के लक्ष्यों और महंगाई को ध्यान में रखना चाहिए ताकि परिवार आर्थिक रूप से सुरक्षित रहे।'
+        },
+        {
+          heading: 'सटीक जानकारी देना अनिवार्य',
+          text: 'आवेदन करते समय अपने स्वास्थ्य का सही विवरण, पारिवारिक चिकित्सा इतिहास और मौजूदा पॉलिसियों की पूरी जानकारी अवश्य दें ताकि भविष्य में क्लेम में कोई समस्या न आए।'
+        }
+      ]
+    }
+  },
+  'health-insurance-guide': {
+    en: {
+      title: 'Health Insurance: Essential Guidelines Before Choosing Coverage',
+      category: 'Health Insurance',
+      readTime: '6 min read',
+      date: 'Updated November 2024',
+      content: [
+        {
+          heading: 'Why Health Insurance Is Critical Today',
+          text: 'Rising medical inflation and modern healthcare costs make adequate health insurance coverage essential for every household. A hospitalization event without insurance can quickly deplete years of hard-earned family savings.'
+        },
+        {
+          heading: 'Individual vs Family Floater Plans',
+          text: '• Individual Plans: Each family member has a dedicated sum insured, ideal for senior citizens or members with known medical histories.\n• Family Floater Plans: A single sum insured is shared across the entire immediate family (self, spouse, dependent children), optimizing premium costs.'
+        },
+        {
+          heading: 'Key Policy Terms You Must Check',
+          text: '• Cashless Network Hospitals: Hospital network availability in your city (such as Rewa and surrounding medical centres).\n• Waiting Periods: Standard waiting period (typically 30 days for illnesses) and pre-existing disease (PED) waiting periods (usually 12 to 36 months).\n• Room Rent Sub-limits & Co-payment: Clauses that specify maximum room rent eligibility or percentages of claims payable by the policyholder.\n• Day-care Procedures: Coverage for medical treatments completed in less than 24 hours due to technological advances.'
+        },
+        {
+          heading: 'Support During Claims',
+          text: 'Having personal guidance during medical emergencies ensures that pre-authorization paperwork, hospital coordination, and documentation are handled smoothly.'
+        }
+      ]
+    },
+    hi: {
+      title: 'स्वास्थ्य बीमा: कवरेज चुनने से पहले जरूरी बातें',
+      category: 'स्वास्थ्य बीमा',
+      readTime: '6 मिनट पढ़ें',
+      date: 'नवंबर 2024 में अपडेट किया गया',
+      content: [
+        {
+          heading: 'स्वास्थ्य बीमा की आवश्यकता',
+          text: 'चिकित्सा खर्चों में निरंतर वृद्धि के कारण पर्याप्त स्वास्थ्य बीमा होना हर परिवार के लिए आवश्यक है। बिना बीमा के अचानक अस्पताल में भर्ती होने से परिवार की वर्षों की बचत प्रभावित हो सकती है।'
+        },
+        {
+          heading: 'व्यक्तिगत बनाम फैमिली फ्लोटर योजनाएं',
+          text: '• व्यक्तिगत योजनाएं (Individual): परिवार के प्रत्येक सदस्य के लिए अलग बीमा राशि, वरिष्ठ नागरिकों के लिए उपयुक्त।\n• फैमिली फ्लोटर (Family Floater): पूरे परिवार के लिए एक साझा बीमा राशि, जो प्रीमियम के लिहाज से किफायती होती है।'
+        },
+        {
+          heading: 'पॉलिसी में ध्यान देने योग्य मुख्य बातें',
+          text: '• कैशलेस नेटवर्क अस्पताल: आपके शहर (जैसे रीवा और नजदीकी शहरों) में पैनल अस्पतालों की सूची।\n• वेटिंग पीरियड: पहले से मौजूद बीमारियों (PED) के लिए निर्धारित प्रतीक्षा अवधि।\n• रूम रेंट सीमा और को-पेमेंट: कमरे के किराए की शर्तें और सह-भुगतान नियम।\n• डे-केयर प्रक्रियाएं: 24 घंटे से कम समय में पूरी होने वाली आधुनिक चिकित्सा प्रक्रियाओं का कवर।'
+        },
+        {
+          heading: 'दावा (Claim) प्रक्रिया में सहायता',
+          text: 'आपातकालीन समय में उचित मार्गदर्शन मिलने से अस्पताल में कैशलेस अप्रूवल और दस्तावेजीकरण प्रक्रिया सुगम हो जाती है।'
+        }
+      ]
+    }
+  }
+}

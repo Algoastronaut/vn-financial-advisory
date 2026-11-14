@@ -1,0 +1,269 @@
+/* Footer.module.css */
+.footer {
+  background: var(--deep-navy);
+  color: rgba(255,255,255,0.75);
+}
+
+/* CTA Strip */
+.ctaStrip {
+  background: linear-gradient(135deg, var(--navy), #163552);
+  border-top: 1px solid rgba(201,164,92,0.2);
+  border-bottom: 1px solid rgba(201,164,92,0.1);
+  padding: 40px 0;
+}
+
+.ctaInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.ctaText h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.ctaText p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Main footer grid */
+.main {
+  padding: 64px 0 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+/* Brand col */
+.brandCol {}
+
+.brandDesc {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  max-width: 280px;
+}
+
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.socialLink:hover {
+  color: var(--gold);
+}
+
+.contactInfo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a.contactLine:hover {
+  color: var(--gold);
+}
+
+/* Links columns */
+.linksCol {}
+
+.colHeading {
+  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--font-sans);
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: var(--gold);
+}
+
+.footerLinkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  text-align: left;
+}
+
+.footerLinkBtn:hover {
+  color: var(--gold);
+}
+
+.regDetailsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(201, 164, 92, 0.12);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+}
+
+.regDetailsBtn:hover {
+  background: var(--gold);
+  color: var(--deep-navy);
+}
+
+/* Regulatory */
+.regCol {}
+
+.regInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.regNote {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+}
+
+.arnPlaceholder {
+  color: var(--gold);
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.mfDisclosure {
+  padding: 12px;
+  background: rgba(201,164,92,0.06);
+  border: 1px solid rgba(201,164,92,0.15);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Disclosure bar */
+.disclosureBar {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 20px 0;
+  background: rgba(0,0,0,0.15);
+}
+
+.disclosureText {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Copyright */
+.copyright {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding: 16px 0;
+}
+
+.copyrightInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.35);
+}
+
+.mfRiskShort {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .brandCol { grid-column: 1 / -1; }
+}
+
+@media (max-width: 768px) {
+  .ctaInner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .copyrightInner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

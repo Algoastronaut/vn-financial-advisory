@@ -1,0 +1,343 @@
+/* Resources.module.css — VN Financial Advisory */
+
+.section {
+  background-color: var(--warm-white);
+  padding: var(--section-py) 0;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-size: 1.0625rem;
+  color: var(--text-mid);
+  line-height: 1.72;
+  margin-bottom: 24px;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 36px;
+}
+
+/* ── Card ── */
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Card top (badge row) ── */
+.cardTop {
+  padding: 20px 24px 0;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(201, 164, 92, 0.12);
+  color: var(--gold);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Card body ── */
+.cardBody {
+  padding: 16px 24px;
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.cardExcerpt {
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  line-height: 1.72;
+
+  /* Clamp to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Card footer ── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.readTime {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.readBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.readBtn:hover {
+  background: var(--gold);
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* ── Disclaimer ── */
+.disclaimer {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: rgba(16, 43, 70, 0.03);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cardTop {
+    padding: 18px 20px 0;
+  }
+
+  .cardBody {
+    padding: 14px 20px;
+  }
+
+  .cardFooter {
+    padding: 14px 20px 18px;
+  }
+}
+
+/* ── Reader Modal ── */
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(11, 27, 43, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 0.25s ease;
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  max-width: 760px;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+  overflow: hidden;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border-light);
+  background: #faf9f6;
+}
+
+.modalMeta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-mid);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: rgba(16, 43, 70, 0.08);
+  color: var(--navy);
+}
+
+.modalBody {
+  padding: 28px 32px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.modalTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--navy);
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.modalDate {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+}
+
+.articleSections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.articleSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.sectionText {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  white-space: pre-line;
+}
+
+.articleNotice {
+  margin-top: 32px;
+  padding: 16px 20px;
+  background: rgba(201, 164, 92, 0.08);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.8125rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-top: 1px solid var(--border-light);
+  background: #faf9f6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 768px) {
+  .modalContent {
+    max-height: 92vh;
+  }
+  .modalHeader, .modalBody, .modalFooter {
+    padding: 16px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalBackdrop {
+    padding: 10px;
+  }
+  .modalContent {
+    max-height: 96vh;
+    border-radius: var(--radius-md);
+  }
+  .modalHeader, .modalBody, .modalFooter {
+    padding: 14px 16px;
+  }
+  .modalTitle {
+    font-size: 1.35rem;
+  }
+  .modalFooter {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  .modalFooter button,
+  .modalFooter a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
