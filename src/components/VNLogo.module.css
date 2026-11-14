@@ -2,15 +2,21 @@
 .navbarWrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   min-width: 0;
 }
 
 .navbarShield {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(201, 164, 92, 0.3));
+  transition: transform 0.25s ease;
+}
+
+.navbarWrap:hover .navbarShield {
+  transform: scale(1.05);
 }
 
 .navbarText {
@@ -22,34 +28,37 @@
 
 .navbarBrand {
   font-family: var(--font-serif);
-  font-size: clamp(0.95rem, 3.8vw, 1.15rem);
+  font-size: clamp(1.05rem, 4vw, 1.35rem);
   font-weight: 700;
   color: #FFFFFF;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .navbarTagline {
-  font-size: clamp(0.52rem, 1.8vw, 0.62rem);
-  font-weight: 600;
+  font-size: clamp(0.56rem, 1.8vw, 0.66rem);
+  font-weight: 700;
   color: var(--gold);
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   white-space: nowrap;
-  margin-top: 2px;
+  margin-top: 3px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 380px) {
   .navbarShield {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
   .navbarWrap {
     gap: 8px;
   }
   .navbarTagline {
-    display: none;
+    font-size: 0.52rem;
+    letter-spacing: 0.12em;
   }
 }

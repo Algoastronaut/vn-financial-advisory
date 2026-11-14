@@ -7,7 +7,7 @@ import styles from './Achievements.module.css'
 /* Map achievement ids to Lucide icons */
 const ICONS = {
   mdrt: null, // rendered as "10×" text
-  cot: Star,
+  cot: null,  // rendered as "2×" text
   titanium: Shield,
   'icici-excellence': Trophy,
 }
@@ -18,7 +18,7 @@ const TROPHY_DATA = [
     src: '/assets/awards/icici-trophy.jpg',
     alt: 'ICICI Prudential Award of Excellence trophy presented to Mr. Vinay Singh for MDRT Qualification-2024',
     title: 'ICICI Prudential Life Insurance — Award of Excellence',
-    subTitle: 'Presented to Mr. Vinay Singh, Rewa',
+    subTitle: 'Presented to Mr. Vinay Singh, Rewa (Advisor ID: ICICI01176293)',
     inscription: [
       'ICICI Prudential Life Insurance',
       'Award of Excellence',
@@ -26,21 +26,21 @@ const TROPHY_DATA = [
       'Rewa',
       'For MDRT Qualification-2024'
     ],
-    details: 'This official physical trophy visibly confirms the Award of Excellence presented to Mr. Vinay Singh by ICICI Prudential Life Insurance in recognition of achieving MDRT Qualification for 2024.',
-    verificationStatus: 'Documented & Visually Verified on Official Trophy'
+    details: 'This official physical trophy visibly confirms the Award of Excellence presented to Mr. Vinay Singh (Advisor ID: ICICI01176293) by ICICI Prudential Life Insurance in recognition of achieving MDRT Qualification for 2024.',
+    verificationStatus: 'Documented Trophy & Advisor ID Verified'
   },
   {
     id: 'cot-mdrt-trophies',
     src: '/assets/awards/cot-mdrt-trophies.jpg',
-    alt: 'Black and gold COT and MDRT recognition trophies',
+    alt: 'Black and gold Court of the Table (COT) and MDRT recognition trophies',
     title: 'Court of the Table (COT) & MDRT Recognition Trophies',
-    subTitle: 'Premier Financial Services Industry Recognition',
+    subTitle: 'Premier Industry Recognition · Advisor IDs: ICICI01176293 & ICICI01374991',
     inscription: [
-      'COT Trophy Base: Presented for achieving COT 2021',
-      'MDRT Trophy Base: ICICI Prudential Award of Excellence for MDRT Qualification Jan - Dec 2021'
+      'COT Trophy: Presented for achieving Court of the Table (COT)',
+      'MDRT Trophy: ICICI Prudential Award of Excellence for MDRT Qualification'
     ],
-    details: 'Physical COT and MDRT black-and-gold recognition trophies. As per business records, individual agency registrations and policyholder portfolios are officially held under respective individual names (Vinay Singh / Neetu Singh). All qualifications reflect strict adherence to industry benchmarks.',
-    verificationStatus: 'Trophies Documented — Final Certificate Verification In Progress'
+    details: 'Physical COT and MDRT recognition trophies representing premier production milestones. Our advisory practice operates with authorized appointments for Mr. Vinay Singh (ID: ICICI01176293) and Mrs. Neetu Singh (ID: ICICI01374991) with ICICI Prudential Life Insurance.',
+    verificationStatus: 'Documented Trophies & Agency IDs Confirmed'
   }
 ]
 
@@ -83,7 +83,10 @@ function AchievementCard({ achievement, index }) {
   const { id, title, subtitle, description } = achievement
   const Icon = ICONS[id]
   const isMDRT = id === 'mdrt'
-  const { value: counterVal, ref: counterRef } = useCounterAnimation(isMDRT ? 10 : 0, 1400)
+  const isCOT = id === 'cot'
+  const isCounter = isMDRT || isCOT
+  const targetCount = isMDRT ? 10 : (isCOT ? 2 : 0)
+  const { value: counterVal, ref: counterRef } = useCounterAnimation(targetCount, 1400)
 
   return (
     <article
@@ -92,9 +95,9 @@ function AchievementCard({ achievement, index }) {
       aria-label={title}
     >
       {/* Icon / Number Badge */}
-      <div className={styles.iconArea} ref={isMDRT ? counterRef : null}>
-        {isMDRT ? (
-          <span className={styles.bigNumber} aria-label="10 times">
+      <div className={styles.iconArea} ref={isCounter ? counterRef : null}>
+        {isCounter ? (
+          <span className={styles.bigNumber} aria-label={`${targetCount} times`}>
             {counterVal}
             <span className={styles.bigNumberSuffix}>×</span>
           </span>

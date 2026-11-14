@@ -94,12 +94,17 @@ export default function Hero() {
             <span className={styles.trustSep} aria-hidden="true">·</span>
             <span className={styles.trustItem}>
               <span className={styles.trustDot} />
-              {BUSINESS.advisor.experience.mutualFunds} in Mutual Funds
+              500+ Families Protected
             </span>
             <span className={styles.trustSep} aria-hidden="true">·</span>
             <span className={styles.trustItem}>
               <span className={styles.trustDot} />
-              10× MDRT Qualified
+              10× MDRT & 2× COT
+            </span>
+            <span className={styles.trustSep} aria-hidden="true">·</span>
+            <span className={styles.trustItem}>
+              <span className={styles.trustDot} />
+              AMFI ARN-{BUSINESS.regulatory.amfiArn}
             </span>
           </div>
         </div>
@@ -124,14 +129,14 @@ export default function Hero() {
             {/* Name card */}
             <div className={styles.nameCard}>
               <div className={styles.nameCardName}>{BUSINESS.advisor.fullName}</div>
-              <div className={styles.nameCardDesig}>{BUSINESS.advisor.designation}</div>
-              <div className={styles.nameCardCo}>{BUSINESS.advisor.company}</div>
+              <div className={styles.nameCardDesig}>{BUSINESS.advisor.designation} · ID: {BUSINESS.regulatory.vinayInsuranceId}</div>
+              <div className={styles.nameCardCo}>With Mrs. Neetu Singh (ID: {BUSINESS.regulatory.neetuInsuranceId})</div>
             </div>
 
             {/* MDRT badge */}
-            <div className={styles.mdrtBadge} aria-label="10 times MDRT qualified">
+            <div className={styles.mdrtBadge} aria-label="10 times MDRT and 2 times COT qualified">
               <Star size={14} className={styles.mdrtStar} />
-              <span>10× MDRT</span>
+              <span>10× MDRT · 2× COT</span>
             </div>
           </div>
         </div>

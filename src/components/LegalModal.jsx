@@ -60,35 +60,39 @@ export default function LegalModal({ isOpen, initialTab = 'regulatory', onClose 
                 <strong>VN Financial Advisory</strong> is a financial services practice operating from Rewa, Madhya Pradesh. The day-to-day business operations, client communication, enquiry handling, and advisory services are managed operationally by <strong>Mr. Vinay Singh</strong>.
               </p>
 
-              <h4 className={styles.subHeading}>Associated Persons & Role Clarity</h4>
+              <h4 className={styles.subHeading}>Associated Advisors & Role Clarity</h4>
               <p className={styles.paragraph}>
-                The individuals associated with VN Financial Advisory and related family assets are:
+                The professionals associated with VN Financial Advisory and their respective verified intermediary credentials are:
               </p>
               <ul className={styles.list}>
-                <li><strong>Mr. Vinay Singh:</strong> Operational Manager & Primary Contact. Engaged in mutual fund distribution and insurance intermediation. Stated designation: Titanium Advisor with ICICI Prudential Life Insurance.</li>
-                <li><strong>Mrs. Neetu Singh:</strong> Wife of Mr. Vinay Singh. Associated in family and asset contexts. In accordance with strict compliance standards, Mrs. Neetu Singh is not represented as an independent financial advisor, insurance agent, mutual fund distributor, director, or partner unless supported by specific verified regulatory licenses.</li>
+                <li><strong>Mr. Vinay Singh:</strong> Founder, Operational Lead & Primary Client Advisor. AMFI Registered Mutual Fund Distributor (ARN-311806). Titanium Advisor with ICICI Prudential Life Insurance (Advisor ID: <code>ICICI01176293</code>). Over 15 years of industry experience.</li>
+                <li><strong>Mrs. Neetu Singh:</strong> Authorized Life Insurance Advisor with ICICI Prudential Life Insurance (Advisor ID: <code>ICICI01374991</code>). Actively associated with client coverage, servicing, and policyholder assistance.</li>
               </ul>
               <p className={styles.noticeBox}>
-                <strong>Important Policyholder Notice:</strong> Individual insurance policies and mutual fund investment accounts are strictly held in the individual names of respective policyholders and investors as officially recorded by the respective life insurer, general/health insurer, or Asset Management Company (AMC). Individual portfolio details and private policyholder records are never published on this public website.
+                <strong>Policyholder & Investment Record Transparency:</strong> Individual insurance policies and mutual fund investment folios are held strictly under the official individual names of respective policyholders and investors as recorded with the respective life insurer or Asset Management Company (AMC).
               </p>
 
               <h4 className={styles.subHeading}>Intermediary Registration Status</h4>
               <div className={styles.regTable}>
                 <div className={styles.regRow}>
                   <span className={styles.regKey}>Mutual Fund Distribution</span>
-                  <span className={styles.regVal}>AMFI Registered Mutual Fund Distributor · ARN: <em className={styles.pendingTag}>[ARN pending pre-launch document verification]</em></span>
+                  <span className={styles.regVal}>AMFI Registered Mutual Fund Distributor · <strong>ARN-311806</strong> (Facilitating SIP, SWP, and Lump-Sum Investments)</span>
                 </div>
                 <div className={styles.regRow}>
-                  <span className={styles.regKey}>Insurance Representation</span>
-                  <span className={styles.regVal}>Authorised Insurance Intermediary · IRDAI License: <em className={styles.pendingTag}>[Verification in progress with principal insurers]</em></span>
+                  <span className={styles.regKey}>Life Insurance Representation</span>
+                  <span className={styles.regVal}>
+                    Authorized Intermediaries — ICICI Prudential Life Insurance Company Ltd.:<br />
+                    • Mr. Vinay Singh — Advisor ID: <strong>ICICI01176293</strong> (Titanium Advisor)<br />
+                    • Mrs. Neetu Singh — Advisor ID: <strong>ICICI01374991</strong>
+                  </span>
                 </div>
                 <div className={styles.regRow}>
                   <span className={styles.regKey}>SEBI Status Notice</span>
-                  <span className={styles.regVal}>VN Financial Advisory acts as a mutual fund distributor and insurance agent/intermediary. It does NOT hold out as an independent SEBI Registered Investment Adviser (RIA) under the SEBI (Investment Advisers) Regulations, 2013, unless specifically verified with an active SEBI IA registration number.</span>
+                  <span className={styles.regVal}>VN Financial Advisory acts as an AMFI-registered mutual fund distributor (ARN-311806) and authorized insurance intermediary. It does NOT hold out as an independent SEBI Registered Investment Adviser (RIA) under SEBI (Investment Advisers) Regulations, 2013.</span>
                 </div>
                 <div className={styles.regRow}>
-                  <span className={styles.regKey}>Principal Insurer Relationship</span>
-                  <span className={styles.regVal}>Recognised as Titanium Advisor with ICICI Prudential Life Insurance. VN Financial Advisory is an independent advisory practice and is not an official branch, subsidiary, or joint-venture entity of ICICI Prudential Life Insurance Company Ltd.</span>
+                  <span className={styles.regKey}>Client Trust Milestone</span>
+                  <span className={styles.regVal}>Proudly serving and protecting <strong>500+ client families</strong> across Rewa and Madhya Pradesh with comprehensive financial solutions.</span>
                 </div>
               </div>
             </div>

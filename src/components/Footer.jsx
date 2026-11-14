@@ -189,14 +189,15 @@ export default function Footer() {
               <div className={styles.regInfo}>
                 <p className={styles.regNote}>
                   AMFI Registered Mutual Fund Distributor<br />
-                  ARN: <strong className={styles.arnPlaceholder}>[Confirm before publishing]</strong>
+                  ARN: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.amfiArnDisplay}</strong>
                 </p>
                 <p className={styles.regNote}>
-                  Authorised Insurance Intermediary<br />
-                  Titanium Advisor — ICICI Prudential Life Insurance
+                  ICICI Prudential Life Insurance Appointments:<br />
+                  • Vinay Singh (ID: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.vinayInsuranceId}</strong>)<br />
+                  • Neetu Singh (ID: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.neetuInsuranceId}</strong>)
                 </p>
                 <p className={styles.regNote}>
-                  Managed Operationally by: <strong>Mr. Vinay Singh</strong>
+                  Proudly Protecting & Serving: <strong>500+ Client Families</strong>
                 </p>
               </div>
               <div className={styles.mfDisclosure}>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLang } from '../context/LangContext'
 import { BUSINESS, WHATSAPP_URL } from '../data/business'
-import { Award, Shield, TrendingUp, MessageCircle, Phone } from 'lucide-react'
+import { Award, Shield, Users, MessageCircle, CheckCircle2 } from 'lucide-react'
 import styles from './About.module.css'
 
 export default function About() {
@@ -27,7 +27,7 @@ export default function About() {
 
               {/* Experience badge */}
               <div className={styles.expBadge}>
-                <div className={styles.expNumber}>10+</div>
+                <div className={styles.expNumber}>15+</div>
                 <div className={styles.expLabel}>Years of<br />Experience</div>
               </div>
             </div>
@@ -62,10 +62,30 @@ export default function About() {
               </div>
             </div>
 
-            {/* Designation */}
-            <div className={styles.designation}>
-              <Shield size={15} className={styles.designationIcon} />
-              <span>{t.about.designation}</span>
+            {/* Verified Team Credentials Box */}
+            <div className={styles.credentialsCard}>
+              <div className={styles.credentialHeader}>
+                <Shield size={16} className={styles.credentialHeaderIcon} />
+                <span>Authorized Financial & Insurance Intermediaries</span>
+              </div>
+              <div className={styles.credentialGrid}>
+                <div className={styles.credentialItem}>
+                  <CheckCircle2 size={14} className={styles.checkIcon} />
+                  <div>
+                    <strong>Mr. Vinay Singh</strong>
+                    <span>Titanium Advisor · ID: <code>{BUSINESS.regulatory.vinayInsuranceId}</code></span>
+                    <span className={styles.arnTag}>AMFI Reg. Mutual Fund Distributor · <strong>ARN-{BUSINESS.regulatory.amfiArn}</strong></span>
+                  </div>
+                </div>
+                <div className={styles.credentialItem}>
+                  <CheckCircle2 size={14} className={styles.checkIcon} />
+                  <div>
+                    <strong>Mrs. Neetu Singh</strong>
+                    <span>Authorized Advisor · ICICI Prudential ID: <code>{BUSINESS.regulatory.neetuInsuranceId}</code></span>
+                    <span className={styles.arnTag}>Life Insurance Advisory & Client Protection</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* CTAs */}
