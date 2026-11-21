@@ -6,7 +6,7 @@ export const BUSINESS = {
     name: 'Vinay Singh',
     fullName: 'Mr. Vinay Singh',
     designation: 'Titanium Advisor',
-    company: 'ICICI Prudential Life Insurance',
+    company: 'ICICI Life Insurance',
     insuranceId: 'ICICI01176293',
     experience: {
       insurance: '15+ Years',
@@ -18,7 +18,7 @@ export const BUSINESS = {
     name: 'Neetu Singh',
     fullName: 'Mrs. Neetu Singh',
     role: 'Life Insurance Advisor',
-    company: 'ICICI Prudential Life Insurance',
+    company: 'ICICI Life Insurance',
     insuranceId: 'ICICI01374991',
   },
   contact: {
@@ -67,16 +67,16 @@ export const BUSINESS = {
     {
       id: 'titanium',
       title: 'Titanium Advisor',
-      subtitle: 'ICICI Prudential Life Insurance',
-      description: 'Recognised as a Titanium Advisor by ICICI Prudential Life Insurance, reflecting exceptional dedication to client service across 15+ years.',
+      subtitle: 'ICICI Life Insurance',
+      description: 'Recognised as a Titanium Advisor by ICICI Life Insurance, reflecting exceptional dedication to client service across 15+ years.',
       icon: 'shield',
       metric: 'Elite',
     },
     {
       id: 'icici-excellence',
       title: 'Award of Excellence',
-      subtitle: 'ICICI Prudential Life Insurance – MDRT Qualification 2024',
-      description: 'Presented the prestigious ICICI Prudential Life Insurance Award of Excellence for MDRT Qualification 2024 to Mr. Vinay Singh, Rewa.',
+      subtitle: 'ICICI Life Insurance – MDRT Qualification 2024',
+      description: 'Presented the prestigious ICICI Life Insurance Award of Excellence for MDRT Qualification 2024 to Mr. Vinay Singh, Rewa.',
       icon: 'trophy',
       metric: '2024',
     },
