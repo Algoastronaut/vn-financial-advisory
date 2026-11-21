@@ -48,23 +48,54 @@
   min-width: 0;
 }
 
-.badge {
+/* Grand Brand Title at the top of Hero */
+.brandTitleWrap {
   margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.brandMainTitle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0;
+  background: linear-gradient(135deg, #FFF9EB 0%, #F5D78E 25%, #C9A45C 65%, #EED59B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 24px rgba(201, 164, 92, 0.5));
+}
+
+.brandSubTitle {
+  font-size: clamp(0.7rem, 1.8vw, 0.88rem);
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.badge {
+  margin-bottom: 16px;
 }
 
 .headline {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2.8rem, 6vw, 5.2rem);
-  font-weight: 800;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 700;
   color: var(--white);
-  line-height: 1.07;
-  margin-bottom: 22px;
+  line-height: 1.15;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
 }
 
@@ -76,8 +107,8 @@
 
 .headlineLine1 {
   display: block;
-  color: #FFFFFF;
-  text-shadow: 0 2px 32px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.08);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 24px rgba(0,0,0,0.5);
 }
 
 .headlineLine2 {
@@ -85,13 +116,13 @@
   background: linear-gradient(135deg, #FFF5D6 0%, #E8C87A 35%, #C9A45C 70%, #F0D99A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 20px rgba(201, 164, 92, 0.55));
+  filter: drop-shadow(0 3px 16px rgba(201, 164, 92, 0.45));
 }
 
 .subtext {
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.72);
+  color: rgba(255,255,255,0.75);
   max-width: 520px;
   margin-bottom: 28px;
 }
@@ -106,10 +137,9 @@
 }
 
 .ctaRow .btn {
-  flex-shrink: 0;
-  min-width: 0;
-  word-break: keep-all;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .trustBar {
@@ -312,6 +342,10 @@
   .textCol {
     align-items: center;
   }
+  .brandTitleWrap {
+    align-items: center;
+    text-align: center;
+  }
   .subtext {
     max-width: 100%;
     margin-left: auto;
@@ -333,6 +367,21 @@
   }
 }
 
+@media (max-width: 860px) {
+  .ctaRow {
+    flex-direction: column;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 12px;
+  }
+  .ctaRow .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     padding-top: 64px;
@@ -343,10 +392,18 @@
     padding-bottom: 52px;
     gap: 28px;
   }
+  .brandMainTitle {
+    font-size: clamp(1.9rem, 7.8vw, 2.6rem);
+    letter-spacing: 0.04em;
+  }
+  .brandSubTitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+  }
   .headline {
-    font-size: clamp(2.1rem, 7.5vw, 2.8rem);
-    line-height: 1.1;
-    letter-spacing: 0.02em;
+    font-size: clamp(1.4rem, 5.2vw, 1.85rem);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
   }
   .subtext {
     font-size: 0.95rem;
@@ -357,9 +414,12 @@
     flex-direction: column;
     gap: 10px;
     margin-bottom: 24px;
+    width: 100%;
   }
   .ctaRow .btn {
     width: 100%;
+    padding: 13px 18px;
+    font-size: 0.92rem;
   }
   .portrait {
     height: 320px;

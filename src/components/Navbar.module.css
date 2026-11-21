@@ -12,6 +12,7 @@
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(201, 164, 92, 0.15);
   transition: background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  overflow-x: clip;
 }
 
 .navbar.scrolled {
@@ -94,8 +95,20 @@
   display: flex;
 }
 
+@media (max-width: 1280px) {
+  .waBtn {
+    display: none;
+  }
+}
+
 .consultBtn {
-  display: flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  font-size: 0.84rem;
 }
 
 /* Mobile quick controls */
@@ -212,7 +225,7 @@
   padding: 13px 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1160px) {
   .desktopNav { display: none; }
   .actions { display: none; }
   .mobileQuickControls { display: flex; }

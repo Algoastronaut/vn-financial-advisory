@@ -37,6 +37,16 @@ export default function Hero() {
       <div className={`container ${styles.inner}`}>
         {/* Left — text */}
         <div className={styles.textCol} ref={textRef}>
+          {/* Prominent Golden Advisory Brand Header */}
+          <div
+            className={styles.brandTitleWrap}
+            data-reveal
+            style={{ opacity: 0, transform: 'translateY(16px)', transition: 'opacity 0.6s ease, transform 0.6s ease' }}
+          >
+            <h1 className={styles.brandMainTitle}>VN FINANCIAL ADVISORY</h1>
+            <div className={styles.brandSubTitle}>TRUST · PARTNERSHIP · GROWTH</div>
+          </div>
+
           <div
             className={`badge badge-gold ${styles.badge}`}
             data-reveal
@@ -46,14 +56,14 @@ export default function Hero() {
             {t.hero.badge}
           </div>
 
-          <h1
+          <h2
             className={styles.headline}
             data-reveal
             style={{ opacity: 0, transform: 'translateY(16px)', transition: 'opacity 0.6s ease, transform 0.6s ease' }}
           >
             <span className={styles.headlineLine1}>{t.hero.headline}</span>
             <span className={styles.headlineLine2}>{t.hero.headlineLine2}</span>
-          </h1>
+          </h2>
 
           <p
             className={styles.subtext}
