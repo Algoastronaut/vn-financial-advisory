@@ -219,6 +219,13 @@
   .mobileMenu { display: block; }
 }
 
+/* Prevent logo brand text from overflowing on small screens */
+@media (max-width: 480px) {
+  .inner {
+    gap: 8px;
+  }
+}
+
 @media (max-width: 380px) {
   .inner {
     height: 64px;

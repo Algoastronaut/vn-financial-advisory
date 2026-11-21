@@ -1,33 +1,26 @@
 import { useRef, useEffect, useState } from 'react'
-import { Star, Shield, Trophy, Award, Maximize2, X, CheckCircle, ExternalLink } from 'lucide-react'
+import { Star, Shield, Trophy, Award, Maximize2, X, CheckCircle, Crown } from 'lucide-react'
 import { useLang } from '../context/LangContext'
 import { BUSINESS } from '../data/business'
 import styles from './Achievements.module.css'
-
-/* Map achievement ids to Lucide icons */
-const ICONS = {
-  mdrt: null, // rendered as "10×" text
-  cot: null,  // rendered as "2×" text
-  titanium: Shield,
-  'icici-excellence': Trophy,
-}
 
 const TROPHY_DATA = [
   {
     id: 'icici-2024',
     src: '/assets/awards/icici-trophy.jpg',
-    alt: 'ICICI Prudential Award of Excellence trophy presented to Mr. Vinay Singh for MDRT Qualification-2024',
-    title: 'ICICI Prudential Life Insurance — Award of Excellence',
+    alt: 'ICICI Life Insurance Award of Excellence trophy presented to Mr. Vinay Singh for MDRT Qualification-2024',
+    title: 'ICICI Life Insurance — Award of Excellence',
     subTitle: 'Presented to Mr. Vinay Singh, Rewa (Advisor ID: ICICI01176293)',
     inscription: [
-      'ICICI Prudential Life Insurance',
+      'ICICI Life Insurance',
       'Award of Excellence',
       'Presented to Mr. Vinay Singh',
       'Rewa',
-      'For MDRT Qualification-2024'
+      'For MDRT Qualification-2024',
     ],
-    details: 'This official physical trophy visibly confirms the Award of Excellence presented to Mr. Vinay Singh (Advisor ID: ICICI01176293) by ICICI Prudential Life Insurance in recognition of achieving MDRT Qualification for 2024.',
-    verificationStatus: 'Documented Trophy & Advisor ID Verified'
+    details:
+      'This official physical trophy confirms the Award of Excellence presented to Mr. Vinay Singh (Advisor ID: ICICI01176293) by ICICI Life Insurance in recognition of MDRT Qualification for 2024.',
+    verificationStatus: 'Documented Trophy & Advisor ID Verified',
   },
   {
     id: 'cot-mdrt-trophies',
@@ -37,15 +30,16 @@ const TROPHY_DATA = [
     subTitle: 'Premier Industry Recognition · Advisor IDs: ICICI01176293 & ICICI01374991',
     inscription: [
       'COT Trophy: Presented for achieving Court of the Table (COT)',
-      'MDRT Trophy: ICICI Prudential Award of Excellence for MDRT Qualification'
+      'MDRT Trophy: ICICI Life Insurance Award of Excellence for MDRT Qualification',
     ],
-    details: 'Physical COT and MDRT recognition trophies representing premier production milestones. Our advisory practice operates with authorized appointments for Mr. Vinay Singh (ID: ICICI01176293) and Mrs. Neetu Singh (ID: ICICI01374991) with ICICI Prudential Life Insurance.',
-    verificationStatus: 'Documented Trophies & Agency IDs Confirmed'
-  }
+    details:
+      'Physical COT and MDRT recognition trophies representing premier production milestones. Our advisory practice operates with authorised appointments for Mr. Vinay Singh (ID: ICICI01176293) and Mrs. Neetu Singh (ID: ICICI01374991) with ICICI Life Insurance.',
+    verificationStatus: 'Documented Trophies & Agency IDs Confirmed',
+  },
 ]
 
-/* Hook: animate a counter from 0 to target when visible */
-function useCounterAnimation(target, duration = 1200) {
+/* Animated counter hook */
+function useCounter(target, duration = 1400) {
   const [value, setValue] = useState(0)
   const ref = useRef(null)
   const animated = useRef(false)
@@ -53,23 +47,21 @@ function useCounterAnimation(target, duration = 1200) {
   useEffect(() => {
     const el = ref.current
     if (!el) return
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !animated.current) {
           animated.current = true
           const start = performance.now()
           const step = (now) => {
-            const progress = Math.min((now - start) / duration, 1)
-            // ease-out cubic
-            const eased = 1 - Math.pow(1 - progress, 3)
+            const p = Math.min((now - start) / duration, 1)
+            const eased = 1 - Math.pow(1 - p, 3)
             setValue(Math.round(eased * target))
-            if (progress < 1) requestAnimationFrame(step)
+            if (p < 1) requestAnimationFrame(step)
           }
           requestAnimationFrame(step)
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.3 }
     )
     observer.observe(el)
     return () => observer.disconnect()
@@ -78,46 +70,100 @@ function useCounterAnimation(target, duration = 1200) {
   return { value, ref }
 }
 
-/* Individual achievement card */
-function AchievementCard({ achievement, index }) {
-  const { id, title, subtitle, description } = achievement
-  const Icon = ICONS[id]
-  const isMDRT = id === 'mdrt'
-  const isCOT = id === 'cot'
-  const isCounter = isMDRT || isCOT
-  const targetCount = isMDRT ? 10 : (isCOT ? 2 : 0)
-  const { value: counterVal, ref: counterRef } = useCounterAnimation(targetCount, 1400)
+/* ─── COT Hero Card (prominent, featured) ─── */
+function COTHeroCard() {
+  const { value: cotVal, ref: cotRef } = useCounter(2, 1600)
+
+  return (
+    <article className={`${styles.cotHero} reveal`} aria-label="2-Time Court of the Table">
+      {/* Crown badge */}
+      <div className={styles.cotCrown}>
+        <Crown size={20} className={styles.cotCrownIcon} />
+        <span>HIGHEST DISTINCTION</span>
+      </div>
+
+      <div className={styles.cotInner}>
+        {/* Giant metric */}
+        <div className={styles.cotMetricWrap} ref={cotRef}>
+          <span className={styles.cotMetric} aria-label="2 times">
+            {cotVal}
+            <span className={styles.cotMetricX}>×</span>
+          </span>
+          <span className={styles.cotMetricLabel}>COURT OF THE TABLE</span>
+          <span className={styles.cotMetricSub}>COT — Elite MDRT Distinction</span>
+        </div>
+
+        {/* Info */}
+        <div className={styles.cotInfo}>
+          <h3 className={styles.cotTitle}>2-Time Court of the Table (COT)</h3>
+          <p className={styles.cotSubtitle}>Top 4% of MDRT Qualifiers Worldwide · 3× MDRT Base Production</p>
+          <p className={styles.cotDesc}>
+            Court of the Table (COT) is one of the most elite distinctions in financial advisory — earned by producing
+            <strong> 3 times the base MDRT requirement</strong>. Mr. Vinay Singh has achieved this pinnacle milestone
+            <strong> twice</strong>, placing him among the top 4% of MDRT members worldwide — a testament to exceptional
+            dedication, ethical practice, and transformative client impact over 15+ years.
+          </p>
+          <div className={styles.cotBadgeRow}>
+            <span className={styles.cotBadge}>
+              <Star size={12} /> MDRT Premier Distinction
+            </span>
+            <span className={styles.cotBadge}>
+              <CheckCircle size={12} /> Internationally Verified
+            </span>
+            <span className={styles.cotBadge}>
+              <Crown size={12} /> Rewa's Finest
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+  )
+}
+
+/* ─── MDRT Feature Card ─── */
+function MDRTCard() {
+  const { value: mdrtVal, ref: mdrtRef } = useCounter(10, 1800)
+
+  return (
+    <article className={`${styles.mdrtCard} reveal`} aria-label="10-Time MDRT Qualifier">
+      <div className={styles.mdrtInner} ref={mdrtRef}>
+        <span className={styles.mdrtNum} aria-label="10 times">
+          {mdrtVal}<span className={styles.mdrtX}>×</span>
+        </span>
+        <div className={styles.mdrtTextBlock}>
+          <h3 className={styles.mdrtTitle}>MDRT Qualifier</h3>
+          <p className={styles.mdrtSub}>Million Dollar Round Table — 10 Consecutive Qualifications</p>
+          <p className={styles.mdrtDesc}>
+            Ten-time MDRT qualification representing a decade of sustained, verified excellence in client protection and ethical financial advisory.
+          </p>
+        </div>
+      </div>
+    </article>
+  )
+}
+
+/* ─── Small achievement card ─── */
+function SmallCard({ achievement, index }) {
+  const IconMap = { titanium: Shield, 'icici-excellence': Trophy }
+  const Icon = IconMap[achievement.id]
 
   return (
     <article
-      className={`${styles.card} reveal`}
+      className={`${styles.smallCard} reveal`}
       style={{ transitionDelay: `${index * 0.1}s` }}
-      aria-label={title}
+      aria-label={achievement.title}
     >
-      {/* Icon / Number Badge */}
-      <div className={styles.iconArea} ref={isCounter ? counterRef : null}>
-        {isCounter ? (
-          <span className={styles.bigNumber} aria-label={`${targetCount} times`}>
-            {counterVal}
-            <span className={styles.bigNumberSuffix}>×</span>
-          </span>
+      <div className={styles.smallIconArea}>
+        {Icon ? (
+          <Icon size={26} strokeWidth={1.5} className={styles.smallIcon} />
         ) : (
-          Icon && (
-            <Icon
-              size={32}
-              strokeWidth={1.5}
-              className={styles.cardIcon}
-              aria-hidden="true"
-            />
-          )
+          <span className={styles.smallMetric}>{achievement.metric}</span>
         )}
       </div>
-
-      {/* Content */}
-      <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>{title}</h3>
-        <span className={styles.cardSubtitle}>{subtitle}</span>
-        <p className={styles.cardDesc}>{description}</p>
+      <div className={styles.smallContent}>
+        <h4 className={styles.smallTitle}>{achievement.title}</h4>
+        <span className={styles.smallSubtitle}>{achievement.subtitle}</span>
+        <p className={styles.smallDesc}>{achievement.description}</p>
       </div>
     </article>
   )
@@ -132,17 +178,13 @@ export default function Achievements() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
+          if (entry.isIntersecting) entry.target.classList.add('visible')
         })
       },
-      { threshold: 0.1, rootMargin: '0px 0px -48px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     )
-
     const reveals = sectionRef.current?.querySelectorAll('.reveal')
     reveals?.forEach((el) => observer.observe(el))
-
     return () => observer.disconnect()
   }, [])
 
@@ -156,6 +198,11 @@ export default function Achievements() {
     document.body.style.overflow = ''
   }
 
+  // Separate achievements: cot + mdrt are featured, rest are small cards
+  const smallCards = BUSINESS.achievements.filter(
+    (a) => a.id !== 'cot' && a.id !== 'mdrt'
+  )
+
   return (
     <section
       id="achievements"
@@ -167,17 +214,23 @@ export default function Achievements() {
         <div className={`${styles.header} reveal`}>
           <span className="section-label">{t.achievements.sectionLabel}</span>
           <h2 className={`section-heading ${styles.heading}`}>{t.achievements.heading}</h2>
-          <p className={`${styles.subheading}`}>{t.achievements.subheading}</p>
+          <p className={styles.subheading}>{t.achievements.subheading}</p>
         </div>
 
-        {/* Achievement Cards — 2×2 grid */}
-        <div className={styles.cardsGrid}>
-          {BUSINESS.achievements.map((achievement, i) => (
-            <AchievementCard key={achievement.id} achievement={achievement} index={i} />
+        {/* ── COT HERO (most prominent) ── */}
+        <COTHeroCard />
+
+        {/* ── MDRT FEATURE ── */}
+        <MDRTCard />
+
+        {/* ── Other achievements (Titanium + Excellence) ── */}
+        <div className={styles.smallGrid}>
+          {smallCards.map((achievement, i) => (
+            <SmallCard key={achievement.id} achievement={achievement} index={i} />
           ))}
         </div>
 
-        {/* Trophy Photographs & Viewing Facility */}
+        {/* Trophy Photos */}
         <div className={`${styles.trophySection} reveal`}>
           <div className={styles.trophyDivider}>
             <span className={styles.trophyDividerLine} />
@@ -194,13 +247,20 @@ export default function Achievements() {
                 className={`${styles.trophyFrame} reveal`}
                 style={{ transitionDelay: `${0.1 + index * 0.12}s` }}
                 onClick={() => openLightbox(trophy)}
-                title="Click to view details and inscription"
+                title="Click to view details"
                 role="button"
                 tabIndex={0}
-                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') openLightbox(trophy) }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') openLightbox(trophy)
+                }}
               >
                 <div className={styles.trophyImgWrap}>
-                  <img src={trophy.src} alt={trophy.alt} className={styles.trophyImg} loading="lazy" />
+                  <img
+                    src={trophy.src}
+                    alt={trophy.alt}
+                    className={styles.trophyImg}
+                    loading="lazy"
+                  />
                   <div className={styles.zoomOverlay}>
                     <Maximize2 size={24} className={styles.zoomIcon} />
                     <span>Click to Inspect Trophy</span>
@@ -216,26 +276,40 @@ export default function Achievements() {
         </div>
 
         {/* Compliance Note */}
-        <aside className={`${styles.complianceNote} reveal`} role="note" aria-label="Compliance note">
+        <aside className={`${styles.complianceNote} reveal`} role="note">
           <p>
             All achievement claims are based on verified records. MDRT (Million Dollar Round Table) is an independent
-            international association. Awards presented by ICICI Prudential Life Insurance reflect individual professional
-            milestones and do not imply endorsement of VN Financial Advisory as an independent legal branch or separate corporate entity.
+            international association. COT (Court of the Table) requires 3× the standard MDRT production threshold.
+            Awards presented by ICICI Life Insurance reflect individual professional milestones and do not imply
+            endorsement of VN Financial Advisory as an independent legal branch or separate corporate entity.
           </p>
         </aside>
       </div>
 
       {/* Lightbox Modal */}
       {selectedTrophy && (
-        <div className={styles.modalBackdrop} onClick={closeLightbox} role="dialog" aria-modal="true">
+        <div
+          className={styles.modalBackdrop}
+          onClick={closeLightbox}
+          role="dialog"
+          aria-modal="true"
+        >
           <div className={styles.modalCard} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.modalCloseBtn} onClick={closeLightbox} aria-label="Close award modal">
+            <button
+              className={styles.modalCloseBtn}
+              onClick={closeLightbox}
+              aria-label="Close award modal"
+            >
               <X size={22} />
             </button>
 
             <div className={styles.modalGrid}>
               <div className={styles.modalImageCol}>
-                <img src={selectedTrophy.src} alt={selectedTrophy.alt} className={styles.modalImg} />
+                <img
+                  src={selectedTrophy.src}
+                  alt={selectedTrophy.alt}
+                  className={styles.modalImg}
+                />
               </div>
               <div className={styles.modalInfoCol}>
                 <div className={styles.modalBadge}>

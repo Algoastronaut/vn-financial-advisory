@@ -65,8 +65,8 @@ export default function LegalModal({ isOpen, initialTab = 'regulatory', onClose 
                 The professionals associated with VN Financial Advisory and their respective verified intermediary credentials are:
               </p>
               <ul className={styles.list}>
-                <li><strong>Mr. Vinay Singh:</strong> Founder, Operational Lead & Primary Client Advisor. AMFI Registered Mutual Fund Distributor (ARN-311806). Titanium Advisor with ICICI Prudential Life Insurance (Advisor ID: <code>ICICI01176293</code>). Over 15 years of industry experience.</li>
-                <li><strong>Mrs. Neetu Singh:</strong> Authorized Life Insurance Advisor with ICICI Prudential Life Insurance (Advisor ID: <code>ICICI01374991</code>). Actively associated with client coverage, servicing, and policyholder assistance.</li>
+                <li><strong>Mr. Vinay Singh:</strong> Founder, Operational Lead & Primary Client Advisor. AMFI Registered Mutual Fund Distributor (ARN-311806). Titanium Advisor with ICICI Life Insurance (Advisor ID: <code>ICICI01176293</code>). Over 15 years of industry experience.</li>
+                <li><strong>Mrs. Neetu Singh:</strong> Authorized Life Insurance Advisor with ICICI Life Insurance (Advisor ID: <code>ICICI01374991</code>). Actively associated with client coverage, servicing, and policyholder assistance.</li>
               </ul>
               <p className={styles.noticeBox}>
                 <strong>Policyholder & Investment Record Transparency:</strong> Individual insurance policies and mutual fund investment folios are held strictly under the official individual names of respective policyholders and investors as recorded with the respective life insurer or Asset Management Company (AMC).
@@ -81,7 +81,7 @@ export default function LegalModal({ isOpen, initialTab = 'regulatory', onClose 
                 <div className={styles.regRow}>
                   <span className={styles.regKey}>Life Insurance Representation</span>
                   <span className={styles.regVal}>
-                    Authorized Intermediaries — ICICI Prudential Life Insurance Company Ltd.:<br />
+                    Authorized Intermediaries — ICICI Life Insurance Company Ltd.:<br />
                     • Mr. Vinay Singh — Advisor ID: <strong>ICICI01176293</strong> (Titanium Advisor)<br />
                     • Mrs. Neetu Singh — Advisor ID: <strong>ICICI01374991</strong>
                   </span>
@@ -163,7 +163,7 @@ export default function LegalModal({ isOpen, initialTab = 'regulatory', onClose 
 
               <h4 className={styles.subHeading}>4. Intellectual Property & Brand Names</h4>
               <p className={styles.paragraph}>
-                The VN Financial Advisory monogram, emblem, tagline ("Trust. Partnership. Growth."), and original website content are protected assets. Third-party brand names (such as ICICI Prudential Life Insurance, AMFI, MDRT) remain the registered trademarks of their respective organizations and are cited herein strictly for factual representation of professional credentials and agency appointments.
+                The VN Financial Advisory monogram, emblem, tagline ("Trust. Partnership. Growth."), and original website content are protected assets. Third-party brand names (such as ICICI Life Insurance, AMFI, MDRT) remain the registered trademarks of their respective organizations and are cited herein strictly for factual representation of professional credentials and agency appointments.
               </p>
             </div>
           )}

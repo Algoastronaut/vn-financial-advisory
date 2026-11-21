@@ -81,7 +81,7 @@ export default function About() {
                   <CheckCircle2 size={14} className={styles.checkIcon} />
                   <div>
                     <strong>Mrs. Neetu Singh</strong>
-                    <span>Authorized Advisor · ICICI Prudential ID: <code>{BUSINESS.regulatory.neetuInsuranceId}</code></span>
+                    <span>Authorized Advisor · ICICI Life Insurance ID: <code>{BUSINESS.regulatory.neetuInsuranceId}</code></span>
                     <span className={styles.arnTag}>Life Insurance Advisory & Client Protection</span>
                   </div>
                 </div>

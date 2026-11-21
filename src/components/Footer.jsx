@@ -192,7 +192,7 @@ export default function Footer() {
                   ARN: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.amfiArnDisplay}</strong>
                 </p>
                 <p className={styles.regNote}>
-                  ICICI Prudential Life Insurance Appointments:<br />
+                  ICICI Life Insurance Appointments:<br />
                   • Vinay Singh (ID: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.vinayInsuranceId}</strong>)<br />
                   • Neetu Singh (ID: <strong style={{ color: 'var(--gold)' }}>{BUSINESS.regulatory.neetuInsuranceId}</strong>)
                 </p>

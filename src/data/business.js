@@ -49,20 +49,22 @@ export const BUSINESS = {
   },
   achievements: [
     {
+      id: 'cot',
+      title: '2-Time Court of the Table (COT)',
+      subtitle: 'Elite MDRT Distinction — Top 4% Worldwide',
+      description: 'Court of the Table (COT) is achieved by producing 3× the MDRT base requirement — placing Mr. Vinay Singh among the top elite financial advisors globally. This prestigious distinction has been earned twice, affirming extraordinary client commitment.',
+      icon: 'star',
+      metric: '2×',
+      highlight: true,
+    },
+    {
       id: 'mdrt',
       title: '10-Time MDRT Qualifier',
       subtitle: 'Million Dollar Round Table (Premier Global Association)',
-      description: 'Ten-time MDRT qualification representing sustained, verified excellence in client protection and ethical advisory practice.',
+      description: 'Ten-time MDRT qualification representing sustained, verified excellence in client protection and ethical advisory practice over more than a decade.',
       icon: 'award',
       metric: '10×',
-    },
-    {
-      id: 'cot',
-      title: '2-Time Court of the Table (COT)',
-      subtitle: 'Exclusive MDRT Distinction',
-      description: 'Achieved Court of the Table (COT) qualification twice — a prestigious milestone attained by top-tier financial professionals worldwide.',
-      icon: 'star',
-      metric: '2×',
+      highlight: false,
     },
     {
       id: 'titanium',
@@ -71,6 +73,7 @@ export const BUSINESS = {
       description: 'Recognised as a Titanium Advisor by ICICI Life Insurance, reflecting exceptional dedication to client service across 15+ years.',
       icon: 'shield',
       metric: 'Elite',
+      highlight: false,
     },
     {
       id: 'icici-excellence',
@@ -79,6 +82,7 @@ export const BUSINESS = {
       description: 'Presented the prestigious ICICI Life Insurance Award of Excellence for MDRT Qualification 2024 to Mr. Vinay Singh, Rewa.',
       icon: 'trophy',
       metric: '2024',
+      highlight: false,
     },
   ],
 }
